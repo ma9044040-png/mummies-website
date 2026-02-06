@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Golden Journey | Angel's Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Egyptian+Hieroglyphs&family=Cinzel+Decorative:wght@700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="progress-bar"></div>
+
+    <nav>
+        <div class="logo">🏺 PROJECT: AFTERLIFE</div>
+        <div class="links">
+            <a href="#mummies">Laboratory</a>
+            <a href="#gallery">Mummy Gallery</a>
+            <a href="#pantheon">The Gods</a>
+            <a href="#game">Imperial Tycoon</a>
+            <a href="#glyphs">The Scribe</a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-overlay">
+            <h1>THE ETERNAL <br> <span class="highlight">MOMMY'S</span></h1>
+            <p>Master Honors Archive | Created by Angel</p>
+            <div class="scroll-prompt">⬇ ENTER THE TOMB OF KNOWLEDGE ⬇</div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section id="mummies" class="card">
+            <h2>I. The Mortuary Sciences</h2>
+            <p>Ancient Egyptians were the world's first biologists. They didn't wrap bodies for fun; they were trying to turn a human into a "Vessel for Eternity." If the body rotted, the soul became a "lost ghost."</p>
+            
+            [attachment_0](attachment)
+
+            <div class="pc-columns">
+                <div class="col">
+                    <h3>The Bio-Chemistry of Natron</h3>
+                    <p>They used <strong>Natron</strong> (a mix of salt and baking soda). It wasn't just a surface dry-out; it worked at a cellular level to stop the enzymes that cause rotting. They stuffed the body with spice-soaked linen to keep the shape, because without it, the body would collapse like a deflated balloon.</p>
+                </div>
+                <div class="col">
+                    <h3>The Organ Extraction</h3>
+                    <p>The priests used a bronze hook to whisk the brain and pull it out the nose (gross, but effective!). They kept the <strong>Heart</strong> inside the body, believing it was the center of intelligence. The rest went into <strong>Canopic Jars</strong> guarded by the sons of Horus.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="card">
+            <h2>II. The Mummy Gallery</h2>
+            <p>Click on the legendary mummies to reveal their secret files and medical history.</p>
+            
+            <div class="gallery-grid">
+                <div class="mummy-item" onclick="showMummy('Ramses II', 'He lived to 90! His mummy shows he had terrible arthritis and a massive dental abscess that probably made him very grumpy.')">
+                    <div class="mummy-pic">🤴</div>
+                    <h4>Ramses the Great</h4>
+                </div>
+                <div class="mummy-item" onclick="showMummy('The Ginger Mummy', 'A natural mummy from 3400 BCE. He wasn\'t wrapped; the hot desert sand dried him out so well his red hair is still visible today!')">
+                    <div class="mummy-pic">👨‍𓐍</div>
+                    <h4>The Ginger Man</h4>
+                </div>
+                <div class="mummy-item" onclick="showMummy('Lady Rai', 'An ancient nurse. Her mummy is so well preserved we can still see her elaborate hairstyle and evidence of skin diseases.')">
+                    <div class="mummy-pic">👩‍𓐍</div>
+                    <h4>Lady Rai</h4>
+                </div>
+            </div>
+            <div id="mummy-info-box" class="fact-box" style="display:none;">
+                <h3 id="m-name"></h3>
+                <p id="m-desc"></p>
+            </div>
+        </section>
+
+        <section id="pantheon" class="card">
+            <h2>III. The Divine Pantheon</h2>
+            <p>The Gods were serious business. If you didn't keep them happy, the Nile wouldn't flood, and everyone would starve. Each god had a "Job Description" and a specific animal avatar.</p>
+
+            <div class="god-entry">
+                <div class="god-info">
+                    <h3>Ra: The Solar Commander</h3>
+                    <p>Ra sails his <strong>Solar Barque</strong> across the sky. He represents the sun at its peak. Every night, he travels through the 12 gates of the underworld, fighting <strong>Apep</strong>, the snake of chaos. If Ra wins, we get a sunrise. If he loses? Total darkness forever.</p>
+                    [attachment_1](attachment)
+                </div>
+                <div class="god-stats">
+                    <strong>AVATAR:</strong> Falcon<br>
+                    <strong>POWER:</strong> Creation
+                </div>
+            </div>
+
+            <div class="god-entry">
+                <div class="god-info">
+                    <h3>Anubis: Master of Secrets</h3>
+                    <p>The Jackal god. He is the ultimate judge of the dead. He invented mummification when he helped Isis put Osiris back together. He is the only god allowed to touch the "Scale of Truth."</p>
+                    [attachment_2](attachment)
+                </div>
+                <div class="god-stats">
+                    <strong>AVATAR:</strong> Jackal<br>
+                    <strong>POWER:</strong> Embalming
+                </div>
+            </div>
+
+            <div class="god-entry">
+                <div class="god-info">
+                    <h3>Sobek: Lord of the Waters</h3>
+                    <p>The Crocodile god. He represents the wild power of the Nile. Egyptians were so scared of crocodiles that they worshipped them to stay safe. They even had a city called <strong>Crocodilopolis</strong> where a tame crocodile lived in a pool with gold earrings!</p>
+                    [attachment_3](attachment)
+                </div>
+                <div class="god-stats">
+                    <strong>AVATAR:</strong> Crocodile<br>
+                    <strong>POWER:</strong> Military Strength
+                </div>
+            </div>
+        </section>
+
+        <section id="game" class="card game-card">
+            <h2>💎 IMPERIAL GOLD TYCOON 💎</h2>
+            <div class="pc-game-layout">
+                <div class="game-view">
+                    <div class="gold-display">Gold: <span id="gold-count">0</span></div>
+                    <button id="click-target" onclick="mineGold()">𓄿</button>
+                    <p>Click the Sacred Eagle!</p>
+                </div>
+                <div class="upgrade-view">
+                    <button class="up-btn" onclick="buy('amulet')">Ankh Power (+2/click) - <span id="c-amulet">20</span>g</button>
+                    <button class="up-btn" onclick="buy('scribe')">Hire Scribe (+5/sec) - <span id="c-scribe">100</span>g</button>
+                    <button class="up-btn" onclick="buy('priest')">Temple Priest (+30/sec) - <span id="c-priest">600</span>g</button>
+                    <button class="up-btn" onclick="buy('pyramid')">Great Pyramid (+200/sec) - <span id="c-pyramid">10000</span>g</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="glyphs" class="card">
+            <h2>The Royal Scribe</h2>
+            <p>Type your name below. The system will convert it into Ancient Hieroglyphs using a specialized rendering engine.</p>
+            <input type="text" id="glyphInput" placeholder="Enter your name..." oninput="translateGlyphs()">
+            <div id="glyphOutput">---</div>
+            <canvas id="glyphCanvas" style="display:none;"></canvas>
+        </section>
+
+        <section class="biblio-section">
+            <h3 style="color:var(--gold)">MLA Works Cited</h3>
+            <div class="citation">
+                <p>Brier, Bob. <em>The History of Ancient Egypt</em>. The Great Courses, 2024.</p>
+                <p>Hawass, Zahi. <em>The Royal Tombs of Egypt</em>. Thames & Hudson, 2024.</p>
+                <p>National Geographic. "Inside the Mummy's Tomb." <em>NatGeo History</em>, 2024.</p>
+                <p>Wilkinson, Toby. <em>The Rise and Fall of Ancient Egypt</em>. Random House, 2023.</p>
+                <p>Angel. "The Lord's Mind: Imperial Reflections." <em>Personal Project</em>, 2026.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Project Afterlife | Created by Angel | Honors History 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
